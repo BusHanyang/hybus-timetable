@@ -1,0 +1,13 @@
+name = "hybus-timetable"
+type = "webpack"
+
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-04-03"
+kv_namespaces = [ 
+	 { binding = "semester", id = "8788b0b3f9d74ffea5c3b78d4681e922" },
+     { binding = "vacation", id = "6d74fe6ec9d64c82999f2a7b85d04b79" },
+     { binding = "vacation_session", id = "79c690fc3ac349b099faac4e760962cf" }
+]
