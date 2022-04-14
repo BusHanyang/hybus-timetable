@@ -3,283 +3,377 @@ import { Router } from 'itty-router'
 // Create a new router
 const router = Router()
 
-// Semester Routes
-// // week
-router.get('/semester/week/residence', async () => {
-    const result = await semester.get('residence_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+// All in one
+router.get('/:season/:week/:location', async ({ params}) => {
+    if (params.season == "semester") {
+        // Semester Routes
+        if (params.week == "week") {
+            // Week
+            if (params.location == "residence") {
+                // Residence
+                const result = await semester.get('residence_week')
 
-router.get('/semester/week/shuttlecoke_i', async () => {
-    const result = await semester.get('shuttlecoke_i_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_i") {
+                // Shuttlecoke inbound buses -> TO Residence
+                const result = await semester.get('shuttlecoke_i_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_o") {
+                // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
+                const result = await semester.get('shuttlecoke_o_week')
 
-router.get('/semester/week/shuttlecoke_o', async () => {
-    const result = await semester.get('shuttlecoke_o_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "subway") {
+                // Hanyang University @ Ansan Station
+                const result = await semester.get('subway_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "yesulin") {
+                // Yesulin Apt.
+                const result = await semester.get('yesulin_week')
 
-router.get('/semester/week/subway', async () => {
-    const result = await semester.get('subway_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else {
+                // Error
+                return new Response(JSON.stringify({ error: `invalid parameter: ${params.location}` }), {
+                    status: 404,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+        }
+        else if (params.week == "weekend") {
+            // Weekend
+            if (params.location == "residence") {
+                // Residence
+                const result = await semester.get('residence_weekend')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_i") {
+                // Shuttlecoke inbound buses -> TO Residence
+                const result = await semester.get('shuttlecoke_i_weekend')
 
-router.get('/semester/week/yesulin', async () => {
-    const result = await semester.get('yesulin_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_o") {
+                // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
+                const result = await semester.get('shuttlecoke_o_weekend')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "subway") {
+                // Hanyang University @ Ansan Station
+                const result = await semester.get('subway_weekend')
 
-// // weekend
-router.get('/semester/weekend/residence', async () => {
-    const result = await semester.get('residence_weekend')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "yesulin") {
+                // Yesulin Apt.
+                const result = await semester.get('yesulin_weekend')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else {
+                // Error
+                return new Response(JSON.stringify({ error: `invalid parameter: ${params.location}` }), {
+                    status: 404,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+        }
+        else {
+            // Error
+            return new Response(JSON.stringify({ error: `invalid parameter: ${params.week}` }), {
+                status: 404,
+                headers: { 'Content-Type': 'application/json' },
+            })
+        }
+    }
+    else if (params.season == "vacation_session") {
+        // Vacation Session Routes
+        if (params.week == "week") {
+            // Week
+            if (params.location == "residence") {
+                // Residence
+                const result = await vacation_session.get('residence_week')
 
-router.get('/semester/weekend/shuttlecoke_i', async () => {
-    const result = await semester.get('shuttlecoke_i_weekend')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_i") {
+                // Shuttlecoke inbound buses -> TO Residence
+                const result = await vacation_session.get('shuttlecoke_i_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_o") {
+                // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
+                const result = await vacation_session.get('shuttlecoke_o_week')
 
-router.get('/semester/weekend/shuttlecoke_o', async () => {
-    const result = await semester.get('shuttlecoke_o_weekend')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "subway") {
+                // Hanyang University @ Ansan Station
+                const result = await vacation_session.get('subway_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "yesulin") {
+                // Yesulin Apt.
+                const result = await vacation_session.get('yesulin_week')
 
-router.get('/semester/weekend/subway', async () => {
-    const result = await semester.get('subway_weekend')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else {
+                // Error
+                return new Response(JSON.stringify({ error: `invalid parameter: ${params.location}` }), {
+                    status: 404,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+        }
+        else if (params.week == "weekend") {
+            // Weekend
+            if (params.location == "residence") {
+                // Residence
+                const result = await vacation_session.get('residence_weekend')
 
-router.get('/semester/weekend/yesulin', async () => {
-    const result = await semester.get('yesulin_weekend')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_i") {
+                // Shuttlecoke inbound buses -> TO Residence
+                const result = await vacation_session.get('shuttlecoke_i_weekend')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_o") {
+                // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
+                const result = await vacation_session.get('shuttlecoke_o_weekend')
 
-// Vacation Routes
-// // week
-router.get('/vacation/week/residence', async () => {
-    const result = await vacation.get('residence_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "subway") {
+                // Hanyang University @ Ansan Station
+                const result = await vacation_session.get('subway_weekend')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "yesulin") {
+                // Yesulin Apt.
+                const result = await vacation_session.get('yesulin_weekend')
 
-router.get('/vacation/week/shuttlecoke_i', async () => {
-    const result = await vacation.get('shuttlecoke_i_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else {
+                // Error
+                return new Response(JSON.stringify({ error: `invalid parameter: ${params.location}` }), {
+                    status: 404,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+        }
+        else {
+            // Error
+            return new Response(JSON.stringify({ error: `invalid parameter: ${params.week}` }), {
+                status: 404,
+                headers: { 'Content-Type': 'application/json' },
+            })
+        }
+    }
+    else if (params.season == "vacation") {
+        // Vacation Routes
+        if (params.week == "week") {
+            // Week
+            if (params.location == "residence") {
+                // Residence
+                const result = await vacation.get('residence_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_i") {
+                // Shuttlecoke inbound buses -> TO Residence
+                const result = await vacation.get('shuttlecoke_i_week')
 
-router.get('/vacation/week/shuttlecoke_o', async () => {
-    const result = await vacation.get('shuttlecoke_o_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_o") {
+                // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
+                const result = await vacation.get('shuttlecoke_o_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "subway") {
+                // Hanyang University @ Ansan Station
+                const result = await vacation.get('subway_week')
 
-router.get('/vacation/week/subway', async () => {
-    const result = await vacation.get('subway_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "yesulin") {
+                // Yesulin Apt.
+                const result = await vacation.get('yesulin_week')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else {
+                // Error
+                return new Response(JSON.stringify({ error: `invalid parameter: ${params.location}` }), {
+                    status: 404,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+        }
+        else if (params.week == "weekend") {
+            // Weekend
+            if (params.location == "residence") {
+                // Residence
+                const result = await vacation.get('residence_weekend')
 
-router.get('/vacation/week/yesulin', async () => {
-    const result = await vacation.get('yesulin_week')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_i") {
+                // Shuttlecoke inbound buses -> TO Residence
+                const result = await vacation.get('shuttlecoke_i_weekend')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "shuttlecoke_o") {
+                // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
+                const result = await vacation.get('shuttlecoke_o_weekend')
 
-// // weekend
-router.get('/vacation/weekend/residence', async () => {
-    const result = await vacation.get('residence_weekend')
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "subway") {
+                // Hanyang University @ Ansan Station
+                const result = await vacation.get('subway_weekend')
 
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else if (params.location == "yesulin") {
+                // Yesulin Apt.
+                const result = await vacation.get('yesulin_weekend')
 
-router.get('/vacation/weekend/shuttlecoke_i', async () => {
-    const result = await vacation.get('shuttlecoke_i_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation/weekend/shuttlecoke_o', async () => {
-    const result = await vacation.get('shuttlecoke_o_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation/weekend/subway', async () => {
-    const result = await vacation.get('subway_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation/weekend/yesulin', async () => {
-    const result = await vacation.get('yesulin_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-// Vacation Session Routes
-// // week
-router.get('/vacation_session/week/residence', async () => {
-    const result = await vacation_session.get('residence_week')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/week/shuttlecoke_i', async () => {
-    const result = await vacation_session.get('shuttlecoke_i_week')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/week/shuttlecoke_o', async () => {
-    const result = await vacation_session.get('shuttlecoke_o_week')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/week/subway', async () => {
-    const result = await vacation_session.get('subway_week')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/week/yesulin', async () => {
-    const result = await vacation_session.get('yesulin_week')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-// // weekend
-router.get('/vacation_session/weekend/residence', async () => {
-    const result = await vacation_session.get('residence_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/weekend/shuttlecoke_i', async () => {
-    const result = await vacation_session.get('shuttlecoke_i_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/weekend/shuttlecoke_o', async () => {
-    const result = await vacation_session.get('shuttlecoke_o_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/weekend/subway', async () => {
-    const result = await vacation_session.get('subway_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
-})
-
-router.get('/vacation_session/weekend/yesulin', async () => {
-    const result = await vacation_session.get('yesulin_weekend')
-
-    return new Response(result, {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' },
-    })
+                return new Response(result, {
+                    status: 200,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+            else {
+                // Error
+                return new Response(JSON.stringify({ error: `invalid parameter: ${params.location}` }), {
+                    status: 404,
+                    headers: { 'Content-Type': 'application/json' },
+                })
+            }
+        }
+        else {
+            // Error
+            return new Response(JSON.stringify({ error: `invalid parameter: ${params.week}` }), {
+                status: 404,
+                headers: { 'Content-Type': 'application/json' },
+            })
+        }
+    }
+    else {
+        // Error
+        return new Response(JSON.stringify({ error: `invalid parameter: ${params.season}` }), {
+            status: 404,
+            headers: { 'Content-Type': 'application/json' },
+        })
+    }
 })
 
 /*
