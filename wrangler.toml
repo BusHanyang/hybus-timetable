@@ -1,4 +1,4 @@
-account_id = ""
+account_id = "25e5a82c44ef34fa034e2dee672bd2d6"
 compatibility_date = "2022-04-03"
 kv_namespaces = [
   {binding = "semester", id = "8788b0b3f9d74ffea5c3b78d4681e922"},
