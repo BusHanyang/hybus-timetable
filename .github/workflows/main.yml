@@ -2,8 +2,12 @@ name: Deploy to Cloudflare
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+    paths:
+      - .github/workflows/main.yml
+      - index.js
+      - package.json
+      - wrangler.toml
 
 jobs:
   deploy:
