@@ -8,4 +8,5 @@ kv_namespaces = [
 main = "./index.js"
 name = "hybus-timetable"
 route = "hybus-timetable"
+type = "webpack"
 workers_dev = true
