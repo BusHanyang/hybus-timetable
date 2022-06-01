@@ -15,7 +15,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev',
+                    },
                 })
             } else if (params.location == 'shuttlecoke_i') {
                 // Shuttlecoke inbound buses -> TO Residence
@@ -23,7 +26,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_o') {
                 // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
@@ -31,7 +37,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'subway') {
                 // Hanyang University @ Ansan Station
@@ -39,7 +48,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'yesulin') {
                 // Yesulin Apt.
@@ -47,7 +59,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else {
                 // Error
@@ -57,7 +72,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                     }),
                     {
                         status: 404,
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                        },
                     }
                 )
             }
@@ -69,7 +87,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_i') {
                 // Shuttlecoke inbound buses -> TO Residence
@@ -77,7 +98,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_o') {
                 // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
@@ -85,7 +109,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'subway') {
                 // Hanyang University @ Ansan Station
@@ -93,7 +120,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'yesulin') {
                 // Yesulin Apt.
@@ -101,7 +131,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else {
                 // Error
@@ -111,7 +144,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                     }),
                     {
                         status: 404,
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                        },
                     }
                 )
             }
@@ -121,7 +157,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                 JSON.stringify({ error: `invalid parameter: ${params.week}` }),
                 {
                     status: 404,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 }
             )
         }
@@ -135,7 +174,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_i') {
                 // Shuttlecoke inbound buses -> TO Residence
@@ -143,7 +185,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_o') {
                 // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
@@ -151,7 +196,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'subway') {
                 // Hanyang University @ Ansan Station
@@ -159,7 +207,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'yesulin') {
                 // Yesulin Apt.
@@ -167,7 +218,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else {
                 // Error
@@ -177,7 +231,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                     }),
                     {
                         status: 404,
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                        },
                     }
                 )
             }
@@ -189,7 +246,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_i') {
                 // Shuttlecoke inbound buses -> TO Residence
@@ -199,7 +259,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_o') {
                 // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
@@ -209,7 +272,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'subway') {
                 // Hanyang University @ Ansan Station
@@ -217,7 +283,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'yesulin') {
                 // Yesulin Apt.
@@ -225,7 +294,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else {
                 // Error
@@ -235,7 +307,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                     }),
                     {
                         status: 404,
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                        },
                     }
                 )
             }
@@ -245,7 +320,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                 JSON.stringify({ error: `invalid parameter: ${params.week}` }),
                 {
                     status: 404,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 }
             )
         }
@@ -259,7 +337,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_i') {
                 // Shuttlecoke inbound buses -> TO Residence
@@ -267,7 +348,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_o') {
                 // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
@@ -275,7 +359,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'subway') {
                 // Hanyang University @ Ansan Station
@@ -283,7 +370,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'yesulin') {
                 // Yesulin Apt.
@@ -291,7 +381,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else {
                 // Error
@@ -301,7 +394,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                     }),
                     {
                         status: 404,
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                        },
                     }
                 )
             }
@@ -313,7 +409,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_i') {
                 // Shuttlecoke inbound buses -> TO Residence
@@ -321,7 +420,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'shuttlecoke_o') {
                 // Shuttlecoke outbound buses -> To subway stn, yesulin apt, etc...
@@ -329,7 +431,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'subway') {
                 // Hanyang University @ Ansan Station
@@ -337,7 +442,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else if (params.location == 'yesulin') {
                 // Yesulin Apt.
@@ -345,7 +453,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
                 return new Response(result, {
                     status: 200,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 })
             } else {
                 // Error
@@ -355,7 +466,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                     }),
                     {
                         status: 404,
-                        headers: { 'Content-Type': 'application/json' },
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                        },
                     }
                 )
             }
@@ -365,7 +479,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
                 JSON.stringify({ error: `invalid parameter: ${params.week}` }),
                 {
                     status: 404,
-                    headers: { 'Content-Type': 'application/json' },
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                    },
                 }
             )
         }
@@ -375,7 +492,10 @@ router.get('/:season/:week/:location', async ({ params }) => {
             JSON.stringify({ error: `invalid parameter: ${params.season}` }),
             {
                 status: 404,
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+                },
             }
         )
     }
@@ -392,7 +512,10 @@ router.all(
     () =>
         new Response(JSON.stringify({ error: 'not found' }), {
             status: 404,
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+            },
         })
 )
 
