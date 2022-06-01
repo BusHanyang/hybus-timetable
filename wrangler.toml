@@ -5,8 +5,6 @@ kv_namespaces = [
   {binding = "vacation", id = "6d74fe6ec9d64c82999f2a7b85d04b79"},
   {binding = "vacation_session", id = "79c690fc3ac349b099faac4e760962cf"},
 ]
-main = "./index.js"
 name = "hybus-timetable"
 route = "hybus-timetable"
-type = "webpack"
 workers_dev = true
