@@ -6,5 +6,4 @@ kv_namespaces = [
   {binding = "vacation_session", id = "79c690fc3ac349b099faac4e760962cf"},
 ]
 name = "hybus-timetable"
-route = "hybus-timetable"
 workers_dev = true
