@@ -1,10 +1,8 @@
 name = "hybus-timetable"
-type = "webpack"
 
 account_id = ""
 workers_dev = true
-route = ""
-zone_id = ""
+route = "hybus-timetable"
 compatibility_date = "2022-04-03"
 kv_namespaces = [ 
 	 { binding = "semester", id = "8788b0b3f9d74ffea5c3b78d4681e922" },
