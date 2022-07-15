@@ -501,6 +501,17 @@ router.get('/:season/:week/:location', async ({ params }) => {
     }
 })
 
+// Disallow search engine indexing
+router.get('/robots.txt', () => {
+    new Response('User-agent: *\nDisallow: /', {
+        status: 200,
+        headers: {
+            'Content-Type': 'text/plain',
+            'Access-Control-Allow-Origin': '*.hybus.app, *.hybus-genesis.pages.dev'
+        },
+    })
+})
+
 /*
 This is the last route we define, it will match anything that hasn't hit a route we've defined
 above, therefore it's useful as a 404 (and avoids us hitting worker exceptions, so make sure to include it!).
