@@ -503,7 +503,7 @@ router.get('/:season/:week/:location', async ({ params }) => {
 
 // Disallow search engine indexing
 router.get('/robots.txt', () => {
-    new Response('User-agent: *\nDisallow: /', {
+    return new Response('User-agent: *\nDisallow: /', {
         status: 200,
         headers: {
             'Content-Type': 'text/plain',
