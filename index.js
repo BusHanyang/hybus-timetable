@@ -4,7 +4,7 @@ import { Router } from 'itty-router'
 const router = Router()
 
 // All in one
-router.get('/:season/:week/:location', async ({ params }) => {
+router.get('/timetable/:season/:week/:location', async ({ params }) => {
     if (params.season == 'semester') {
         // Semester Routes
         if (params.week == 'week') {
@@ -502,7 +502,7 @@ router.get('/:season/:week/:location', async ({ params }) => {
 })
 
 // Disallow search engine indexing
-router.get('/robots.txt', () => {
+router.get('/timetable/robots.txt', () => {
     return new Response('User-agent: *\nDisallow: /', {
         status: 200,
         headers: {
