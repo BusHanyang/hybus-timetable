@@ -44,7 +44,8 @@ Any routes that do not match `/{season}/{week}/{location}` will throw an error J
 * `DY`: The bus goes directly to Yesulin Apt.
 * `C`: Circle route bus. (Shuttlecoke(Outbound) -> HYU@Ansan Stn -> Yesulin Apt. -> Shuttlecoke(Inbound) -> Residence)
 * `R`: The bus goes to the dormitory.
-* Empty string or NA: Not specified, the bus comes on time, but goes nowhere. (CAN NOT RIDE)
+* Empty String: Goes directly to Shuttlecoke(Inbound).
+* `NA`: Not specified, the bus comes on time, but goes nowhere. (CAN NOT RIDE)
 
 
 ### How to test/contribute
