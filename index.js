@@ -17,7 +17,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app',
+                        'Access-Control-Allow-Origin': '*',
                     },
                 })
             } else if (params.location == 'shuttlecoke_i') {
@@ -28,7 +28,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_o') {
@@ -39,7 +39,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'subway') {
@@ -50,7 +50,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'yesulin') {
@@ -61,7 +61,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else {
@@ -74,7 +74,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         status: 404,
                         headers: {
                             'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*.hybus.app'
+                            'Access-Control-Allow-Origin': '*'
                         },
                     }
                 )
@@ -89,7 +89,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_i') {
@@ -100,7 +100,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_o') {
@@ -111,7 +111,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'subway') {
@@ -122,7 +122,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'yesulin') {
@@ -133,7 +133,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else {
@@ -146,7 +146,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         status: 404,
                         headers: {
                             'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*.hybus.app'
+                            'Access-Control-Allow-Origin': '*'
                         },
                     }
                 )
@@ -159,7 +159,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 404,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 }
             )
@@ -176,7 +176,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_i') {
@@ -187,7 +187,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_o') {
@@ -198,7 +198,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'subway') {
@@ -209,7 +209,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'yesulin') {
@@ -220,7 +220,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else {
@@ -233,7 +233,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         status: 404,
                         headers: {
                             'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*.hybus.app'
+                            'Access-Control-Allow-Origin': '*'
                         },
                     }
                 )
@@ -248,7 +248,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_i') {
@@ -261,7 +261,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_o') {
@@ -274,7 +274,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'subway') {
@@ -285,7 +285,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'yesulin') {
@@ -296,7 +296,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else {
@@ -309,7 +309,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         status: 404,
                         headers: {
                             'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*.hybus.app'
+                            'Access-Control-Allow-Origin': '*'
                         },
                     }
                 )
@@ -322,7 +322,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 404,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 }
             )
@@ -339,7 +339,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_i') {
@@ -350,7 +350,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_o') {
@@ -361,7 +361,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'subway') {
@@ -372,7 +372,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'yesulin') {
@@ -383,7 +383,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else {
@@ -396,7 +396,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         status: 404,
                         headers: {
                             'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*.hybus.app'
+                            'Access-Control-Allow-Origin': '*'
                         },
                     }
                 )
@@ -411,7 +411,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_i') {
@@ -422,7 +422,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'shuttlecoke_o') {
@@ -433,7 +433,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'subway') {
@@ -444,7 +444,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else if (params.location == 'yesulin') {
@@ -455,7 +455,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 200,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 })
             } else {
@@ -468,7 +468,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         status: 404,
                         headers: {
                             'Content-Type': 'application/json',
-                            'Access-Control-Allow-Origin': '*.hybus.app'
+                            'Access-Control-Allow-Origin': '*'
                         },
                     }
                 )
@@ -481,7 +481,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     status: 404,
                     headers: {
                         'Content-Type': 'application/json',
-                        'Access-Control-Allow-Origin': '*.hybus.app'
+                        'Access-Control-Allow-Origin': '*'
                     },
                 }
             )
@@ -494,7 +494,7 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                 status: 404,
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*.hybus.app'
+                    'Access-Control-Allow-Origin': '*'
                 },
             }
         )
@@ -507,7 +507,7 @@ router.get('/timetable/robots.txt', () => {
         status: 200,
         headers: {
             'Content-Type': 'text/plain',
-            'Access-Control-Allow-Origin': '*.hybus.app'
+            'Access-Control-Allow-Origin': '*'
         },
     })
 })
@@ -525,7 +525,7 @@ router.all(
             status: 404,
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*.hybus.app'
+                'Access-Control-Allow-Origin': '*'
             },
         })
 )
