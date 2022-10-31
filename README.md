@@ -54,3 +54,8 @@ Any routes that do not match `/{season}/{week}/{location}` will throw an error J
 2. Run `npm install`.
 3. Run `npm run dev`. This will make you test the routers in localhost.
 4. If it works, send a PR!
+
+
+### To use this API
+
+Please contact us via admin@hybus.app
