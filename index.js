@@ -64,6 +64,17 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         'Access-Control-Allow-Origin': '*'
                     },
                 })
+            } else if (params.location == 'jungang') {
+                // Jungang Station
+                const result = await semester.get('jungang_week')
+
+                return new Response(result, {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                })
             } else {
                 // Error
                 return new Response(
@@ -134,6 +145,17 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     headers: {
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*'
+                    },
+                })
+            } else if (params.location == 'jungang') {
+                // Jungang Station
+                const result = await semester.get('jungang_weekend')
+
+                return new Response(result, {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
                     },
                 })
             } else {
@@ -223,6 +245,17 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         'Access-Control-Allow-Origin': '*'
                     },
                 })
+            } else if (params.location == 'jungang') {
+                // Jungang Station
+                const result = await vacation_session.get('jungang_week')
+
+                return new Response(result, {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                })
             } else {
                 // Error
                 return new Response(
@@ -297,6 +330,17 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     headers: {
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*'
+                    },
+                })
+            } else if (params.location == 'jungang') {
+                // Jungang Station
+                const result = await vacation_session.get('jungang_weekend')
+
+                return new Response(result, {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
                     },
                 })
             } else {
@@ -386,6 +430,17 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                         'Access-Control-Allow-Origin': '*'
                     },
                 })
+            } else if (params.location == 'jungang') {
+                // Jungang Station
+                const result = await vacation.get('jungang_week')
+
+                return new Response(result, {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                    },
+                })
             } else {
                 // Error
                 return new Response(
@@ -456,6 +511,17 @@ router.get('/timetable/:season/:week/:location', async ({ params }) => {
                     headers: {
                         'Content-Type': 'application/json',
                         'Access-Control-Allow-Origin': '*'
+                    },
+                })
+            } else if (params.location == 'jungang') {
+                // Jungang Station
+                const result = await vacation.get('jungang_weekend')
+
+                return new Response(result, {
+                    status: 200,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
                     },
                 })
             } else {
